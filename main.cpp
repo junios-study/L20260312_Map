@@ -1,27 +1,6 @@
-#include <iostream>
 #include "Engine.h"
 
-
 using namespace std;
-
-
-
-//overloading, ÀçÁ¤ÀÇ
-//int Add(int A, int B)
-//{
-//	return A + B;
-//}
-//
-//float Add(float A, float B)
-//{
-//	return A + B;
-//}
-//
-//double Add(double A, double B)
-//{
-//	return A + B;
-//}
-
 
 int main()
 {

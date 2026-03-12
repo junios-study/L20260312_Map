@@ -5,13 +5,6 @@
 
 extern int Map[10][10];
 
-//template class
-//template function
-template<typename T>
-T Add(T A, T B)
-{
-	return A + B;
-}
 
 int Input();
 
