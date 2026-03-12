@@ -3,18 +3,9 @@
 #include <iostream>
 #include <Windows.h>
 
-//custom data type
+FVector2i PlayerPosition = { 1, 1 };
 
 
-Position PlayerPosition;
-
-int PlayerX = 1;
-int PlayerY = 1;
-
-
-int PalyerHP = 100;
-int PlayerItem[10];
-int PlayerGold = 100;
 
 int Map[10][10] =
 {
@@ -71,10 +62,16 @@ void Clear()
 
 }
 
+void AddPlayerOffset(FVector2i DeltaPosition)
+{
+	PlayerPosition.X += DeltaPosition.X;
+	PlayerPosition.Y += DeltaPosition.Y;
+}
+
 void AddPlayerOffset(int DeltaX, int DeltaY)
 {
-	PlayerX += DeltaX;
-	PlayerY += DeltaY;
+	PlayerPosition.X += DeltaX;
+	PlayerPosition.Y += DeltaY;
 }
 
 void Render()
@@ -87,7 +84,7 @@ void Render()
 		{
 			Gotoxy(X, Y);
 
-			if (PlayerX == X && PlayerY == Y)
+			if (PlayerPosition.X == X && PlayerPosition.Y == Y)
 			{
 				std::cout << "P";
 			}

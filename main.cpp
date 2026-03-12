@@ -3,25 +3,76 @@
 
 using namespace std;
 
-struct Color
+struct InnerType
 {
-	int R;
-	int G;
-	int B;
 	int A;
+	int B;
+};
+
+struct CustomDataType
+{
+	int A;
+	int B;
+	float C;
+	bool D;
+	InnerType Inner;
+};
+
+class AActor
+{
+public:
+
+	int X;
+	int Y;
+
+	void Add()
+	{
+
+	}
+
+	void Move()
+	{
+		this->Add();
+	}
+};
+//Computer 졸라 빨라 -> 현질(비용 down)
+//사물(OOP) 단위 빠를까? 절차 만드는게 빠를까? 실행 속도 기준(c, asm)
+//사물 -> 데이터 (데이터 모델링)
+/// <summary>
+/// OOP
+/// </summary>
+/// <returns></returns>
+/// 
+
+class Engine
+{
+public:
+	void Init();
+	void Run();
+
 };
 
 int main()
 {
-	cout << sizeof(Color);
+	CustomDataType Data;
+	CustomDataType* P = &Data;
+	Data.A = 1;
+	std::cout << (*P).A;
+	std::cout << P->A;
 
-	Color PlayerColor;
-	PlayerColor.R = 255;
-	PlayerColor.G = 255;
-	PlayerColor.B = 255;
+	AActor* Player = nullptr;
+
+	Player = new AActor();
+
+
+	Player->Move();
+
+	delete Player;
+	Player = nullptr;
 
 
 	return 0;
+
 	bool bIsRunning = true;
 
 	//Gameloop

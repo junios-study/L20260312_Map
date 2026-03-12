@@ -5,38 +5,13 @@
 
 extern int Map[10][10];
 
-extern int PlayerX;
-extern int PlayerY;
-
-/// <summary>
-/// public class
-/// </summary>
-struct Position2
+struct FVector2i
 {
 	int X;
 	int Y;
-
-	void AddPlayerOffset(int DeltaX, int DeltaY)
-	{
-
-	}
 };
 
-class Position
-{
-public:
-	int X;
-	int Y;
-
-	void AddPlayerOffset(int DeltaX, int DeltaY)
-	{
-
-	}
-
-};
-//C++
-
-extern Position PlayerPosition;
+extern FVector2i PlayerPosition;
 
 int Input();
 
@@ -47,6 +22,8 @@ void Render();
 void Gotoxy(int x, int y);
 
 void Clear();
+
+void AddPlayerOffset(FVector2i DeltaPosition);
 
 void AddPlayerOffset(int DeltaX, int DeltaY);
 
