@@ -1,9 +1,8 @@
 #include <iostream>
-#include <vector>
 #include "Engine.h"
 
-using namespace std;
 
+using namespace std;
 
 
 
@@ -26,15 +25,6 @@ using namespace std;
 
 int main()
 {
-	std::vector<int> IntArray;
-
-	cout << Add<float>(10.5f, 20.1f) << endl;
-	cout << Add<int>(10, 20) << endl;
-	cout << Add<char>(10, 20) << endl;
-	cout << Add<double>(10, 20) << endl;
-
-	return 0;
-
 	bool bIsRunning = true;
 
 	//Gameloop
