@@ -3,8 +3,18 @@
 #include <iostream>
 #include <Windows.h>
 
+//custom data type
+
+
+Position PlayerPosition;
+
 int PlayerX = 1;
 int PlayerY = 1;
+
+
+int PalyerHP = 100;
+int PlayerItem[10];
+int PlayerGold = 100;
 
 int Map[10][10] =
 {
